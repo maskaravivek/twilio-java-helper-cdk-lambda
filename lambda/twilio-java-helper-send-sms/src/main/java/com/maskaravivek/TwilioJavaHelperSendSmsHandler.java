@@ -1,4 +1,4 @@
-package com.myorg;
+package com.maskaravivek;
 
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.google.gson.Gson;

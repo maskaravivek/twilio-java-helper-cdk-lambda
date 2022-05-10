@@ -1,4 +1,4 @@
-package com.myorg;
+package com.maskaravivek;
 
 public class SendSmsRequest {
     private String phoneNumber;
