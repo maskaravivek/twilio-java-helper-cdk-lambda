@@ -1,4 +1,4 @@
-package com.maskaravivek;
+package com.myorg;
 
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.google.gson.Gson;
@@ -27,7 +27,7 @@ public class TwilioJavaHelperSendSmsHandler implements RequestHandler<APIGateway
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
         Message message = Message.creator(new PhoneNumber(sendSmsRequest.getPhoneNumber()),
-                new PhoneNumber("+15017250604"),
+                new PhoneNumber("+16625038403"),
                 sendSmsRequest.getMessage()).create();
 
         System.out.println(message.getSid());

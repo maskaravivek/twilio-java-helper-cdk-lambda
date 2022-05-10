@@ -1,4 +1,4 @@
-package com.maskaravivek;
+package com.myorg;
 
 import software.amazon.awscdk.App;
 import software.amazon.awscdk.StackProps;

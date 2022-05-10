@@ -1,4 +1,4 @@
-package com.maskaravivek;
+package com.myorg;
 
 import software.amazon.awscdk.BundlingOptions;
 import software.amazon.awscdk.CfnOutput;
@@ -12,7 +12,6 @@ import software.amazon.awscdk.services.apigatewayv2.alpha.HttpMethod;
 import software.amazon.awscdk.services.apigatewayv2.alpha.PayloadFormatVersion;
 import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpLambdaIntegration;
 import software.amazon.awscdk.services.apigatewayv2.integrations.alpha.HttpLambdaIntegrationProps;
-import software.constructs.Construct;
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 
@@ -22,6 +21,7 @@ import software.amazon.awscdk.services.lambda.FunctionProps;
 import software.amazon.awscdk.services.lambda.Runtime;
 import software.amazon.awscdk.services.logs.RetentionDays;
 import software.amazon.awscdk.services.s3.assets.AssetOptions;
+import software.constructs.Construct;
 
 import static java.util.Collections.singletonList;
 
@@ -61,8 +61,8 @@ public class TwilioJavaHelperLambdaStack extends Stack {
                 .outputType(ARCHIVED);
 
         HashMap<String, String> environmentMap = new HashMap<>();
-        environmentMap.put("TWILIO_ACCOUNT_SID", "<application_sid>");
-        environmentMap.put("TWILIO_AUTH_TOKEN", "<auth_token>");
+        environmentMap.put("TWILIO_ACCOUNT_SID", "AC80a979d0c051168fe730106d50eb0c4e");
+        environmentMap.put("TWILIO_AUTH_TOKEN", "ac1c1d5db20ba13782fa629491c515f9");
 
         Function sendSmsFunction = new Function(this, "TwilioJavaHelperSendSms", FunctionProps.builder()
                 .runtime(Runtime.JAVA_11)

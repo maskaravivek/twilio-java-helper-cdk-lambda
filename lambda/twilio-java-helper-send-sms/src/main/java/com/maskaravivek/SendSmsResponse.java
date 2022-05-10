@@ -1,4 +1,4 @@
-package com.maskaravivek;
+package com.myorg;
 
 public class SendSmsResponse {
     private String messageSid;
