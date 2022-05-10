@@ -44,7 +44,7 @@ public class TwilioJavaHelperLambdaStack extends Stack {
                 "-c",
                 "cd twilio-java-helper-send-sms " +
                         "&& mvn clean install " +
-                        "&& cp target/twilio-java-helper-send-sms-1.0.jar /asset-output/"
+                        "&& cp /asset-input/twilio-java-helper-send-sms/target/twilio-java-helper-send-sms.jar /asset-output/"
         );
 
         BundlingOptions.Builder builderOptions = BundlingOptions.builder()
