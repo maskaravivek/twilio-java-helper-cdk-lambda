@@ -38,7 +38,7 @@ jobs:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
       - name: cdk synth
-        uses: parameswaranvv/aws-java-cdk-github-actions@v1.1.0
+        uses: parameswaranvv/aws-java-cdk-github-actions@v1
         with:
           cdk_subcommand: 'synth'
           cdk_version: '1.16.2'
