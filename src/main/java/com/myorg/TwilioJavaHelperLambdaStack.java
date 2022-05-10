@@ -61,8 +61,8 @@ public class TwilioJavaHelperLambdaStack extends Stack {
                 .outputType(ARCHIVED);
 
         HashMap<String, String> environmentMap = new HashMap<>();
-        environmentMap.put("TWILIO_ACCOUNT_SID", "AC80a979d0c051168fe730106d50eb0c4e");
-        environmentMap.put("TWILIO_AUTH_TOKEN", "ac1c1d5db20ba13782fa629491c515f9");
+        environmentMap.put("TWILIO_ACCOUNT_SID", System.getenv("TWILIO_ACCOUNT_SID"));
+        environmentMap.put("TWILIO_AUTH_TOKEN", System.getenv("TWILIO_AUTH_TOKEN"));
 
         Function sendSmsFunction = new Function(this, "TwilioJavaHelperSendSms", FunctionProps.builder()
                 .runtime(Runtime.JAVA_11)
