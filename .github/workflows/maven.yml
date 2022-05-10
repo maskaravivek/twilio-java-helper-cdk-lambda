@@ -25,7 +25,7 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - name: cdk bootstrap
-        uses: parameswaranvv/aws-java-cdk-github-actions@v1
+        uses: roechi/aws-java-cdk-github-actions@v1.5
         with:
           cdk_subcommand: 'bootstrap'
           actions_comment: false
@@ -38,7 +38,7 @@ jobs:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
       - name: cdk synth
-        uses: parameswaranvv/aws-java-cdk-github-actions@v1
+        uses: roechi/aws-java-cdk-github-actions@v1.5
         with:
           cdk_subcommand: 'synth'
           cdk_version: '1.16.2'
@@ -52,7 +52,7 @@ jobs:
           TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
           TWILIO_AUTH_TOKEN: ${{ secrets.TWILIO_AUTH_TOKEN }}
       - name: cdk deploy
-        uses: parameswaranvv/aws-java-cdk-github-actions@v1
+        uses: roechi/aws-java-cdk-github-actions@v1.5
         with:
           cdk_subcommand: 'deploy'
           cdk_stack: 'TwilioJavaHelperLambdaStack'
